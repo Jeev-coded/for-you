@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Perfection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Indie+Flower&family=Caveat:wght@700&family=Pacifico&family=Satisfy&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background: #ffb3c1; /* Matching the pink theme */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header { margin: 50px 0; text-align: center; color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
+
+        .gallery { max-width: 500px; width: 100%; }
+
+        /* The Polaroid Frame Style */
+        .frame {
+            background: white;
+            padding: 15px 15px 60px 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin-bottom: 60px;
+            transform: rotate(-2deg);
+            transition: 0.3s;
+        }
+
+        /* Alternating tilt for creativity */
+        .frame:nth-child(4n), .frame:nth-child(4n-2) { transform: rotate(2deg); }
+
+        .frame:hover { transform: rotate(0deg) scale(1.05); z-index: 10; }
+
+        .frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #eee;
+        }
+
+        .frame-label {
+            text-align: center;
+            padding-top: 15px;
+            font-size: 1.6rem;
+            color: #333;
+        }
+
+        /* Paragraph Styling */
+        .paragraph {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: -40px; 
+            margin-bottom: 80px;
+            color: #590d22;
+            line-height: 1.6;
+            text-align: center;
+            font-size: 1.1rem;
+            font-style: italic;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Fixed Music Player */
+        .music-player {
+            position: fixed; bottom: 20px; right: 20px;
+            background: white; padding: 15px; border-radius: 50px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2); z-index: 1000;
+            display: flex; align-items: center; gap: 10px;
+        }
+        #playBtn { background: #ff4d6d; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; }
+
+        /* Font Classes */
+        .f1 { font-family: 'Pacifico', cursive; }
+        .f2 { font-family: 'Indie Flower', cursive; }
+        .f3 { font-family: 'Dancing Script', cursive; }
+        .f4 { font-family: 'Caveat', cursive; }
+        .f5 { font-family: 'Satisfy', cursive; }
+        .f6 { font-family: 'Great Vibes', cursive; font-size: 2.2rem; }
+    </style>
+</head>
+<body>
+<audio id="mySong" src="perfect.mp3" loop></audio>
+
+<div class="music-player">
+    <p style="margin: 0 0 10px 0; font-family: 'Pacifico';">Now Playing: Perfect ❤️</p>
+    <button onclick="togglePlay()" id="playBtn">Pause</button>
+</div>
+
+<style>
+    .music-player {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 15px;
+        border-radius: 20px;
+        border: 2px solid #ff4d6d;
+        z-index: 1000;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    #playBtn {
+        background: #ff4d6d;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+</style>
+
+<script>
+    const song = document.getElementById("mySong");
+    const playBtn = document.getElementById("playBtn");
+
+    // This makes it play as soon as the page loads
+    window.onload = function() {
+        song.play().catch(error => {
+            console.log("Autoplay blocked, waiting for user interaction.");
+        });
+    }
+
+    function togglePlay() {
+        if (song.paused) {
+            song.play();
+            playBtn.innerText = "Pause";
+        } else {
+            song.pause();
+            playBtn.innerText = "Play";
+        }
+    }
+</script>
+
+    <div class="header">
+        <h1 class="f1" style="font-size: 2.5rem;">My Love, My other Half, My Kuchupuchu<33❤️</h1>
+        <p>I Love you more than anything and anyone <33333333</p>
+    </div>
+
+    <div class="gallery">
+        <div class="frame">
+            <img src="images/photo1.jpg">
+            <div class="frame-label f1">Mera Betu<3333</div>
+        </div>
+        <div class="paragraph">I still remember the first time I saw you. My world stopped for a second.I never want to lose what we started here.</div>
+
+        <div class="frame">
+            <img src="images/photo2.jpg">
+            <div class="frame-label f2">Meri Kuchupuchu<333</div>
+        </div>
+        <div class="paragraph">This smile is my favorite view in the whole world. I hate that I was the reason it wasn't there today. I'll do anything to see it again.</div>
+
+        <div class="frame">
+            <img src="images/photo3.jpg">
+            <div class="frame-label f3">Meri Rasmalai<333</div>
+        </div>
+        <div class="paragraph">More than anything, you're my best friend.You are my Soul, my Heart, The LOVE OF MY LIFE<33 .</div>
+
+        <div class="frame">
+            <img src="images/photo4.jpg">
+            <div class="frame-label f4">My Favorite Human<33</div>
+        </div>
+        <div class="paragraph">Even when you're mad at me, you're the most beautiful person I've ever known. I don't deserve you, but I'm so glad I have you.</div>
+
+        <div class="frame">
+            <img src="images/photo5.jpg">
+            <div class="frame-label f5"></div>
+        </div>
+        <div class="paragraph">Looking at this makes me realize how much joy you bring into my life. I'm sorry for taking that for granted even for a moment.</div>
+
+        <div class="frame">
+            <img src="images/photo6.jpg">
+            <div class="frame-label f6">Perfect Tonight<3333</div>
+        </div>
+        <div class="paragraph">I know I'm not perfect, but I'll spend the rest of my life trying to love you perfectly.I love you more than words. ❤️</div>
+    </div>
+
+    <script>
+        const song = document.getElementById("mySong");
+        const playBtn = document.getElementById("playBtn");
+
+        function togglePlay() {
+            if (song.paused) {
+                song.play();
+                playBtn.innerText = "Pause";
+            } else {
+                song.pause();
+                playBtn.innerText = "Play";
+            }
+        }
+    </script>
+<footer style="color: white; padding: 40px; font-family: 'Arial'; opacity: 0.7;">
+        Made with love for you.Just for you<3333.
+    </footer>
+</body>
+</html>
